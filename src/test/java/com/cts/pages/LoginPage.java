@@ -22,7 +22,7 @@ public LoginPage(WebDriver driver)
 	driver.findElement(emailLocator).sendKeys(email);
 	}
 
-	//enter passowrd
+	//enter password
 	public void enterpassword(String password)
 	{
 	driver.findElement(passwordLocator).sendKeys(password);

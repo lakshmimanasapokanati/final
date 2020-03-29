@@ -6,16 +6,10 @@ Feature: OpenCartApplication
   Background: these are the steps common for every scenario to be followed
   Given I have browser with opencartpage 
   
-  Scenario Outline: ValidLoginCredential
- When I enter '<username>' and password '<password>'
+  Scenario: ValidLoginCredential
+ When I enter login details from Excel "src/test/resources/ExcelSheet/OpenCart.xlsx" with SheetName "ValidCredentials"
  Then I should access to the portal with title with My Account
  
- Examples:
- |username|password|
- |anjanipriya123@gmail.com|anju.555|
- |pravallika12@gmail.com|sunny123|
- |s0nii03021998@gmail.com|christ@07|
- |manasapokanati@gmail.com|manasa.123|
  
  
  Scenario Outline: InvalidLoginCredential
